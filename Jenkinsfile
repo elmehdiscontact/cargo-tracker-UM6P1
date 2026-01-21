@@ -4,9 +4,7 @@ pipeline {
     triggers {
         githubPush()   
     }
-        tools {
-    maven 'Maven'  // This name must match the name you configured in Jenkins
-}
+ 
 
     stages {
 
