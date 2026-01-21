@@ -4,7 +4,9 @@ pipeline {
     triggers {
         githubPush()   
     }
- 
+        tools {
+    maven 'Maven'  // This name must match the name you configured in Jenkins
+}
 
     stages {
 
@@ -14,15 +16,11 @@ pipeline {
             }
         }
 
-       stage('Build & Test') {
-            steps {
-                bat 'mvnw.cmd clean verify'
-    }
-}
+ 
 
     
     }
-//
+// new  test
     post {
         success {
             echo 'Build et analyse terminés avec succès !'
